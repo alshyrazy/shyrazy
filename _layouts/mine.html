@@ -1,0 +1,17 @@
+---
+layout: post
+col: "red"
+---
+<hr>
+
+
+{%include Header.html color = layout.col %}
+{%if page.name == "defu" %}
+    <h1> worked </h1>
+{%endif%}
+<p>{{ page.name }}</p>
+{% for post in site.posts%}
+<p>{{page.author}}</p>
+
+<li><a href="{{post.url}}">{{post.title}}</a></li>
+{%endfor%}
